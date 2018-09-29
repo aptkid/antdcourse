@@ -1,7 +1,7 @@
 export default {
     plugins: [
         ['umi-plugin-react', {
-            //暂时未配置
+            antd: true
         }]
 
     ],
@@ -9,5 +9,11 @@ export default {
     routes: [{
         path: '/',
         component: './HelloWorld'
+    }, {
+        path: 'user',
+        component: './user'
+    }, {
+        path: 'MyInput',
+        component: './MyInput'
     }]
 };
