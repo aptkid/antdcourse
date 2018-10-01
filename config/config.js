@@ -1,7 +1,8 @@
 export default {
     plugins: [
         ['umi-plugin-react', {
-            antd: true
+            antd: true,
+            dva: true
         }]
 
     ],
@@ -14,10 +15,13 @@ export default {
         component: './MyInput'
     }, {
         path: '/',
-        component: './layout/index',
-        routes: [{
-            path: '/',
-            component: './HelloWorld'
-        }]
+        component: './Layout/Index',
+        routes: [
+            { path: './', component: 'Dashboard/PuzzleCards' }, 
+            { path: '/dashboard/analysis', component: 'Dashboard/Analysis' },
+            { path: '/dashboard/monitor', component: 'Dashboard/Monitor' }, 
+            { path: '/dashboard/workplace', component: 'Dashboard/WorkPlace'
+        }
+    ]
     }]
 };
